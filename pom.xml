@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>my-first-api-test</artifactId>
+  <version>1.2.3</version>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.restlet.dhc</groupId>
+        <artifactId>dhc-maven-plugin</artifactId>
+        <version>1.1.0.1</version>
+        <executions>
+         <execution>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <file>company-scenario.json</file>
+              <licenseKey>ZKGgfbpy/6FQLqAYJPVyEZDBwVTQ4A+L93OjOR9omERiw0GZseS2tnlm8Z1XLvapKNrK0/HBVG9d3kld7uExaNXvZ9kkapz8wTjLFhreIgU=</licenseKey>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>restlet-maven</id>
+      <name>Restlet public Maven repository Release Repository</name>
+      <url>http://maven.restlet.com</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
